@@ -1,11 +1,12 @@
 import { WebContainer } from "@webcontainer/api";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface PreviewFrameProps {
+  files: any[];
   webContainer: WebContainer;
 }
 
-export function PreviewFrame({ webContainer }: PreviewFrameProps) {
+export function PreviewFrame({ files, webContainer }: PreviewFrameProps) {
   // In a real implementation, this would compile and render the preview
   const [url, setUrl] = useState("");
 
